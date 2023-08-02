@@ -69,7 +69,7 @@ ggsave("Figuras/02_GrowthC_plot_Clone.png")
 
 GrowthC_plot <- ggplot(DataGC_sum, aes(tempo, mean_value, group = pop)) +
   geom_line(aes(color  = pop), size = 0.5)+
-  ggtitle("Promastigotes growth with and without 150μM of SbIII") +
+  ggtitle("PGPA KO and KO Promastigotes growth with and without SbIII") +
   labs(x = " Time (h)  ", y = "Abs")+
   theme(plot.title = element_text(size = 14,face="bold"),
         axis.text.x = element_text(size = 10), 
