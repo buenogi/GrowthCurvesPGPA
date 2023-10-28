@@ -68,18 +68,20 @@ ggsave("Figuras/02_GrowthC_plot_Clone.png")
 
 
 GrowthC_plot <- ggplot(DataGC_sum, aes(tempo, mean_value, group = pop)) +
-  geom_line(aes(color  = pop), size = 0.5)+
-  ggtitle("PGPA KO and KO Promastigotes growth with and without SbIII") +
-  labs(x = " Time (h)  ", y = "Abs")+
-  theme(plot.title = element_text(size = 14,face="bold"),
-        axis.text.x = element_text(size = 10), 
-        axis.text.y = element_text(size = 10),
-        axis.title.x = element_text(size = 15),
-        axis.title.y = element_text(size = 15))+
+  geom_line(aes(color  = pop), linewidth = 0.8)+
+  ggtitle("PGPA KO and HKO Promastigotes growth with and without SbIII") +
+  labs(x = " Tempo (h)  ", y = "Abs (600nm)")+
+  theme(base_size = 25)+
   scale_x_discrete(labels = c("0h", "24h", "48h", "72h", "96h","120h")) +
-  facet_grid(DataGC_sum$conc)+
-  theme_bw()
+  facet_wrap(DataGC_sum$conc, ncol = 2)+
+  theme_bw( base_size = 25)
 
 GrowthC_plot + labs(color = "Populations")
 ggsave("Figuras/03_GrowthC_plot.png")
+
+# install.packages("lme4")
+# library(lme4)
+# modelo_anova <- lmer(abs ~ pop * tempo * conc + (1 | experiment),
+#                      data = DataGC)
+# summary(modelo_anova)
 

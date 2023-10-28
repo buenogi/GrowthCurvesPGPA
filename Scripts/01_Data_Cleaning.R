@@ -1,5 +1,5 @@
 ################################################################################
-############## Data cleaning  - Growth Curves PGPA HKO/KO clones  #################
+############## Data cleaning  - Growth Curves PGPA HKO/KO clones  ##############
 ################################################################################
 
 library(tidyverse)
@@ -487,7 +487,9 @@ D7_EXP3$experiment <- "EXP3"
 
 DataGC <- rbind(D1_EXP1,D1_EXP2, D1_EXP3, D2_EXP1, D2_EXP2, D2_EXP3,
                 D3_EXP1, D3_EXP2, D3_EXP3, D4_EXP1, D4_EXP2,
-                D4_EXP3,D5_EXP1, D5_EXP2, D5_EXP3, D6_EXP1, D6_EXP2, D6_EXP3,D7_EXP1, D7_EXP2, D7_EXP3)
+                D4_EXP3,D5_EXP1, D5_EXP2, D5_EXP3, D6_EXP1, D6_EXP2, 
+                D6_EXP3,D7_EXP1, D7_EXP2, D7_EXP3)
 
 write.csv(DataGC, file = "Data/Processed/DataGC.csv", sep = ",")
+
 
