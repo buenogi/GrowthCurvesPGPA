@@ -6,6 +6,7 @@ library(dplyr)
 library(ggplot2) 
 library(drc)
 library(gridExtra)
+
 # Loading data 
 
 DataGC <- read.csv(file = "Data/Processed/DataGC.csv")
