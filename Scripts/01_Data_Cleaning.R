@@ -114,7 +114,7 @@ D5_EXP1 <- D5_EXP1 %>%
   pivot_longer(cols=c("REF", "C76","C67", "C68"),
                names_to='pop',
                values_to='abs')
-D5_EXP1$tempo <- "96" 
+D5_EXP1$tempo <- "72" 
 D5_EXP1$conc  <- rep(c("0", "10","50","75","100","150"), each = 4)
 D5_EXP1$experiment <- "EXP1" 
 
@@ -137,7 +137,7 @@ D6_EXP1 <- D6_EXP1 %>%
   pivot_longer(cols=c("REF", "C76","C67", "C68"),
                names_to='pop',
                values_to='abs')
-D6_EXP1$tempo <- "120" 
+D6_EXP1$tempo <- "96" 
 D6_EXP1$conc  <- rep(c("0", "10","50","75","100","150"), each = 4)
 D6_EXP1$experiment <- "EXP1"  
 
@@ -159,7 +159,7 @@ D7_EXP1 <- D7_EXP1 %>%
   pivot_longer(cols=c("REF", "C76","C67", "C68"),
                names_to='pop',
                values_to='abs')
-D7_EXP1$tempo <- "144" 
+D7_EXP1$tempo <- "120" 
 D7_EXP1$conc  <- rep(c("0", "10","50","75","100","150"), each = 4)
 D7_EXP1$experiment <- "EXP1" 
 
@@ -275,7 +275,7 @@ D5_EXP2 <- D5_EXP2 %>%
   pivot_longer(cols=c("REF", "C76","C67", "C68"),
                names_to='pop',
                values_to='abs')
-D5_EXP2$tempo <- "96" 
+D5_EXP2$tempo <- "72" 
 D5_EXP2$conc  <- rep(c("0", "10","50","75","100","150"), each = 4)
 D5_EXP2$experiment <- "EXP2" 
 
@@ -298,7 +298,7 @@ D6_EXP2 <- D6_EXP2 %>%
   pivot_longer(cols=c("REF", "C76","C67", "C68"),
                names_to='pop',
                values_to='abs')
-D6_EXP2$tempo <- "120" 
+D6_EXP2$tempo <- "96" 
 D6_EXP2$conc  <- rep(c("0", "10","50","75","100","150"), each = 4)
 D6_EXP2$experiment <- "EXP2"  
 
@@ -320,7 +320,7 @@ D7_EXP2 <- D7_EXP2 %>%
   pivot_longer(cols=c("REF", "C76","C67", "C68"),
                names_to='pop',
                values_to='abs')
-D7_EXP2$tempo <- "144" 
+D7_EXP2$tempo <- "120" 
 D7_EXP2$conc  <- rep(c("0", "10","50","75","100","150"), each = 4)
 D7_EXP2$experiment <- "EXP2" 
 
@@ -434,7 +434,7 @@ D5_EXP3 <- D5_EXP3 %>%
   pivot_longer(cols=c("REF", "C76","C67", "C68"),
                names_to='pop',
                values_to='abs')
-D5_EXP3$tempo <- "96" 
+D5_EXP3$tempo <- "72" 
 D5_EXP3$conc  <- rep(c("0", "10","50","75","100","150"), each = 4)
 D5_EXP3$experiment <- "EXP3" 
 
@@ -457,7 +457,7 @@ D6_EXP3 <- D6_EXP3 %>%
   pivot_longer(cols=c("REF", "C76","C67", "C68"),
                names_to='pop',
                values_to='abs')
-D6_EXP3$tempo <- "120" 
+D6_EXP3$tempo <- "96" 
 D6_EXP3$conc  <- rep(c("0", "10","50","75","100","150"), each = 4)
 D6_EXP3$experiment <- "EXP3"  
 
@@ -479,7 +479,7 @@ D7_EXP3 <- D7_EXP3 %>%
   pivot_longer(cols=c("REF", "C76","C67", "C68"),
                names_to='pop',
                values_to='abs')
-D7_EXP3$tempo <- "144" 
+D7_EXP3$tempo <- "120" 
 D7_EXP3$conc  <- rep(c("0", "10","50","75","100","150"), each = 4)
 D7_EXP3$experiment <- "EXP3" 
 

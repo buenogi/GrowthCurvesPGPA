@@ -10,12 +10,14 @@ library(ggplot2)
 
 DataGC <- read.csv(file = "Data/Processed/DataGC.csv")
 
+# DataGC <-  DataGC[DataGC$tempo != 0, ]
 # Checking classes
 
 sapply(DataGC, class)
 
 DataGC$experiment <- as.factor(DataGC$experiment)
 DataGC$conc <- as.factor(DataGC$conc)
+
 # EDA
 
 DataGC$tempo <- as.factor(DataGC$tempo)
@@ -83,7 +85,7 @@ ggsave("Figuras/03_GrowthC_plot.png")
 # Remoção do dia zero:
 
 DataGC_def <- DataGC%>%
-  filter(tempo!= 1)
+  filter(tempo!= 0)
 
 DataGC_def$conc <-  as.factor(DataGC_def$conc)
 
@@ -107,7 +109,7 @@ P1 <- DataGC_error%>%
                 width = 0.05)+
   scale_color_manual(values = c("deeppink",
                                 colorRampPalette(c("lightseagreen", "grey"))(3))) +
-  scale_x_discrete(labels = c("24h", "48h", "72h", "96h", "120h", "144h"))+
+  scale_x_discrete(labels = c("24h", "48h", "72h", "96h", "120h"))+
   labs(x = "Tempo",
        y = "Abs (600nm)",
        color = "Clones")+
@@ -119,7 +121,7 @@ P1 <- DataGC_error%>%
                                                      "100" = "100 μM",
                                                      "150" = "150 μM")), 
              nrow = 3)+
-  theme(text = element_text(size = 18),
+  theme(text = element_text(size = 24, face = "bold"),
         legend.position = "bottom")
 P1
 ggsave("Figuras/04_GrowthC_plot.png")
@@ -136,10 +138,10 @@ P2 <- DataGC_error%>%
   labs(x = "Tempo",
        y = "Abs (600nm)",
        color = "Concentração de SbIII (μM)")+
-  scale_x_discrete(labels = c("24h", "48h", "72h", "96h", "120h", "144h"))+
+  scale_x_discrete(labels = c("24h", "48h", "72h", "96h", "120h"))+
   scale_color_manual(values = c(colorRampPalette(c("lightseagreen","deeppink"))(6)))+
   theme_bw() +
-  theme(text = element_text(size = 18),
+  theme(text = element_text(size = 20, face = "bold"),
         legend.position = "bottom")
 
 P2
@@ -148,6 +150,6 @@ ggsave("Figuras/05_GrowthC_plot.png")
 
 library(patchwork)
 
-P1/(P2+ plot_layout(ncol = 4, widths = c(3, 1)))+ plot_annotation(tag_levels = "A")
+P1/P2+ plot_annotation(tag_levels = "A")
 
 ggsave("Figuras/6_GrowthC_plot.png")  
